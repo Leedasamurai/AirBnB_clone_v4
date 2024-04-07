@@ -1,0 +1,24 @@
+!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>1-hbnb</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<script src="../static/scripts/1-hbnb.js?cache_id={{ cache_id }}"></script>
+	</head>
+	<body>
+		<h1>1-hbnb Page</h1>
+		<div id="amenities">
+			<h2>Amenities</h2>
+			<ul>
+				{% for amenity_id, amenity in amenities.items() %}
+				<li>
+					<input type="checkbox" data-id="{{ amenity_id }}" data-name="{{ amenity.name }}">
+					<label>{{ amenity.name }}</label>
+				</li>
+				{% endfor %}
+			</ul>
+		</div>
+	</body>
+</html>
